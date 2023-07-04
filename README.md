@@ -37,6 +37,20 @@ so now we have the initial guess for prime1. I will go to "descending_primes.py"
 
 now what this script does is it iterates over the primes in a descending order. since we are on the greater side of the target prime.
 
-After running the script for few minutes it returns the primes whose product is less than n, and are very close to the answer we seek
-![image](https://github.com/MohamedAwad9k8/EGCERT-CTFs2023-Easy_Encryption_Challenge_Writeup/assets/75997594/0151bc0b-23fc-45d8-abf8-33f6bed3270a)
+Next let's run "descending_primes.py", I recorded the time it took before yeilding a result, it took roughly 10 minutes.
+![image](https://github.com/MohamedAwad9k8/EGCERT-CTFs2023-Easy_Encryption_Challenge_Writeup/assets/75997594/85f69190-6e67-408e-845f-f693a06f7084)
+and here's the results
+![image](https://github.com/MohamedAwad9k8/EGCERT-CTFs2023-Easy_Encryption_Challenge_Writeup/assets/75997594/2b5387a8-275e-4aac-afc8-718d2c2acbc5)
+
+I will take those results and put them into another script I wrote "getting_the_primes.py". In this script I will iterate in an ascending order, since it's on the side of primes whose product is less than the modulus.
+![image](https://github.com/MohamedAwad9k8/EGCERT-CTFs2023-Easy_Encryption_Challenge_Writeup/assets/75997594/4709e286-549e-4a97-b77c-82d41f779c07)
+
+The result comes back with all the values of the 4 primes
+![image](https://github.com/MohamedAwad9k8/EGCERT-CTFs2023-Easy_Encryption_Challenge_Writeup/assets/75997594/b56ebe82-c494-470b-94cc-e2c8e0333cca)
+
+Finally we have the the 4 primes and we can get the two decryption keys d1 and d2
+I use "rsa.py" to do these steps and to do the decryption as well, after running the script I finally got the flag!!!
+![image](https://github.com/MohamedAwad9k8/EGCERT-CTFs2023-Easy_Encryption_Challenge_Writeup/assets/75997594/e8c00cf6-4501-479f-87f0-223582fec683)
+
+
 
