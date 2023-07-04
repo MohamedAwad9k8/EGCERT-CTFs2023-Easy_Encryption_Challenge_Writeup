@@ -26,3 +26,17 @@ So I worked on bruteforcing the factorization with an iterative method approach,
 
 Note: p1 = getPrime(512) --> means the smallest prime is a random prime with 512 bits size, so the primes are in the range of     
 [2pow(1) - 2pow(15)-1] this gives us around 10pow(154) possible primes which is why normal iteration would be too slow.
+
+First I will run "initial_guessing_the_primes.py" so that I get a good initial guess for the prime p1, such that the product of 4 successive primes is greater than the modulus n.
+
+
+![image](https://github.com/MohamedAwad9k8/EGCERT-CTFs2023-Easy_Encryption_Challenge_Writeup/assets/75997594/2253df9f-124f-4412-8aaf-99a3489a64da)
+
+so now we have the initial guess for prime1. I will go to "descending_primes.py" and initilize prime4 with this value of prime1 we got from the terminal.
+![image](https://github.com/MohamedAwad9k8/EGCERT-CTFs2023-Easy_Encryption_Challenge_Writeup/assets/75997594/57a9afb4-5701-4953-b8e4-f18ecf71704c)
+
+now what this script does is it iterates over the primes in a descending order. since we are on the greater side of the target prime.
+
+After running the script for few minutes it returns the primes whose product is less than n, and are very close to the answer we seek
+![image](https://github.com/MohamedAwad9k8/EGCERT-CTFs2023-Easy_Encryption_Challenge_Writeup/assets/75997594/0151bc0b-23fc-45d8-abf8-33f6bed3270a)
+
