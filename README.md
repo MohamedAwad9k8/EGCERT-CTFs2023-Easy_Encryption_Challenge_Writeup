@@ -24,6 +24,12 @@ First I tried Alberton and Factor.db but modulus (n1 from the output file) was t
 
 So I worked on bruteforcing the factorization with an iterative method approach, meaning that I take the output of each iteration and use it as in input for the next iteration while decreasing the searching steps to increase the accuracy of searching. This way I decrease the complexity of bruteforcing the factorization and get a quicker result instead of waiting many hours using a simple for loop and incrementing the same small steps everytime.
 
+![image](https://github.com/MohamedAwad9k8/EGCERT-CTFs2023-Easy_Encryption_Challenge_Writeup/assets/75997594/8de5cb13-58c7-40db-b4ca-387783f35fdc)
+![image](https://github.com/MohamedAwad9k8/EGCERT-CTFs2023-Easy_Encryption_Challenge_Writeup/assets/75997594/14349bd0-1dc8-4008-bf7a-2cf42b92ee74)
+
+Here's how I implemented this idea, through using a big value slightly smaller than the prime, and subtracting it from the prime at the end of each loop before getting the previous prime.
+The script adjusts the value that we subtract from the prime each iteration, such that as we move closer, we subtract smaller values, and get better accuracy.
+
 Note: p1 = getPrime(512) --> means the smallest prime is a random prime with 512 bits size, so the primes are in the range of     
 [2pow(1) - 2pow(15)-1] this gives us around 10pow(154) possible primes which is why normal iteration would be too slow.
 
@@ -49,6 +55,13 @@ The result comes back with all the values of the 4 primes
 ![image](https://github.com/MohamedAwad9k8/EGCERT-CTFs2023-Easy_Encryption_Challenge_Writeup/assets/75997594/b56ebe82-c494-470b-94cc-e2c8e0333cca)
 
 Finally we have the the 4 primes and we can get the two decryption keys d1 and d2
+It's worth noting that the source code doesn't use the normal rsa encryption method however it multiplies the encrypted message with an integer to add padding and randomness.
+We need to remove it's effect before we can decrypt.
+
+
+![image](https://github.com/MohamedAwad9k8/EGCERT-CTFs2023-Easy_Encryption_Challenge_Writeup/assets/75997594/4a472e1b-85a4-4a2d-b8d7-cecef784e766)
+
+
 I use "rsa.py" to do these steps and to do the decryption as well, after running the script I finally got the flag!!!
 ![image](https://github.com/MohamedAwad9k8/EGCERT-CTFs2023-Easy_Encryption_Challenge_Writeup/assets/75997594/e8c00cf6-4501-479f-87f0-223582fec683)
 
