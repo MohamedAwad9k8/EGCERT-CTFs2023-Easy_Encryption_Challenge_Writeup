@@ -25,6 +25,8 @@ First I tried Alberton and Factor.db but modulus (n1 from the output file) was t
 So I worked on bruteforcing the factorization with an iterative method approach, meaning that I take the output of each iteration and use it as in input for the next iteration while decreasing the searching steps to increase the accuracy of searching. This way I decrease the complexity of bruteforcing the factorization and get a quicker result instead of waiting many hours using a simple for loop and incrementing the same small steps everytime.
 
 ![image](https://github.com/MohamedAwad9k8/EGCERT-CTFs2023-Easy_Encryption_Challenge_Writeup/assets/75997594/8de5cb13-58c7-40db-b4ca-387783f35fdc)
+.  
+.  
 ![image](https://github.com/MohamedAwad9k8/EGCERT-CTFs2023-Easy_Encryption_Challenge_Writeup/assets/75997594/14349bd0-1dc8-4008-bf7a-2cf42b92ee74)
 
 Here's how I implemented this idea, through using a big value slightly smaller than the prime, and subtracting it from the prime at the end of each loop before getting the previous prime.
